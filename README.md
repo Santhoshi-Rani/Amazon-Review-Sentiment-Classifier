@@ -1,6 +1,11 @@
 # Amazon-Review-Sentiment-Classifier - Review Satisfaction Prediction Using NLP
 A Machine Learning & Natural Language Processing Project
  ___________________________________________________________________________________________________
+# Amazon Review Sentiment Analyzer
+
+Live App:
+https://amazon-review-classifier.streamlit.app/
+ 
 ## 📌 Project Overview
 This project focuses on building a text-based sentiment classification system to predict whether a customer review is satisfied or unsatisfied.
 Using Natural Language Processing (NLP) techniques and machine learning models, the goal is to analyze customer feedback and automatically determine the satisfaction level.
