@@ -1,4 +1,6 @@
-streamlit
+streamlit==1.45.1
 pandas
 scikit-learn
-nltk
+nltk==3.8.1
+numpy
+scipy
