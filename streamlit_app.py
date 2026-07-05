@@ -417,7 +417,7 @@ with tab1:
                     if show_processed:
                         processed = preprocess_text(user_input)
                         with st.expander("🔧 View Processed Text"):
-                            st.code(processed, language="text")
+                            st.text_area("Processed Text", value = processed, height = 120, label_visibility = "collapsed", disabled = True)
         else:
             st.warning("⚠️ Please enter a review to analyze.")
 
