@@ -25,29 +25,123 @@ st.set_page_config(
 # --- Custom CSS for better styling ---
 st.markdown("""
 <style>
-    .stButton > button {
-        width: 100%;
-        background-color: #ff4b4b;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .stButton > button:hover {
-        background-color: #ff6b6b;
-        color: white;
-    }
-    .sentiment-card {
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        margin: 10px 0;
-    }
-    .unsatisfied { background-color: #ffebee; border-left: 5px solid #f44336; }
-    .neutral { background-color: #fff3e0; border-left: 5px solid #ff9800; }
-    .satisfied { background-color: #e8f5e9; border-left: 5px solid #4caf50; }
-</style>
-""", unsafe_allow_html=True)
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"]{
+    font-family:'Inter',sans-serif;
+}
+
+.stApp{
+    background:#F8FAFC;
+}
+
+section[data-testid="stSidebar"]{
+    background:#FFFFFF;
+    border-right:1px solid #E5E7EB;
+}
+
+.block-container{
+    padding-top:2rem;
+    padding-bottom:2rem;
+    max-width:1200px;
+}
+
+h1{
+    color:#111827;
+    font-weight:700;
+}
+
+h2,h3{
+    color:#1F2937;
+}
+
+.stTextArea textarea{
+
+    border-radius:14px;
+
+    border:1px solid #D1D5DB;
+
+    background:#FFFFFF;
+
+    color:#111827;
+
+    font-size:16px;
+
+}
+
+.stTextArea textarea:focus{
+
+    border:2px solid #2563EB;
+
+}
+
+.stButton>button{
+
+    width:100%;
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    height:52px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.stButton>button:hover{
+
+    background:#1D4ED8;
+
+}
+
+[data-testid="metric-container"]{
+
+    background:white;
+
+    border-radius:16px;
+
+    border:1px solid #E5E7EB;
+
+    padding:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+div[data-testid="stExpander"]{
+
+    background:white;
+
+    border-radius:12px;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.stTabs [data-baseweb="tab-list"]{
+
+    gap:20px;
+
+}
+
+.stTabs [data-baseweb="tab"]{
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+</style>
+""",unsafe_allow_html=True)
 # --- File paths ---
 MODEL_PATH = 'final_logistic_model.pkl'
 VECTORIZER_PATH = 'fitted_tfidf_vectorizer.pkl'
