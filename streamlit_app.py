@@ -294,7 +294,7 @@ def analyze_sentiment(text, model, vectorizer):
 
 # --- Sidebar with information ---
 with st.sidebar:
-    st.image("https://img.icons8.com/color/96/000000/google-reviews.png", width=80)
+    st.image("classifier.png", width=80)
     st.title("ℹ️ About")
     st.markdown("""
     This app uses **Machine Learning** to analyze customer reviews and predict sentiment.
