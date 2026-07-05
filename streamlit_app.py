@@ -139,6 +139,74 @@ div[data-testid="stExpander"]{
     font-weight:600;
 
 }
+html,
+body,
+[data-testid="stAppViewContainer"],
+[data-testid="stHeader"]{
+    background:#F8FAFC !important;
+    color:#111827 !important;
+}
+
+/* Main page text */
+p,
+span,
+div,
+label{
+    color:#111827 !important;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] *{
+    color:#111827 !important;
+}
+
+/* Markdown */
+[data-testid="stMarkdownContainer"]{
+    color:#111827 !important;
+}
+
+/* Tabs */
+button[data-baseweb="tab"]{
+    color:#111827 !important;
+}
+
+/* Checkbox text */
+.stCheckbox label{
+    color:#111827 !important;
+}
+
+/* Success / Warning / Info */
+[data-testid="stAlert"]{
+    color:#111827 !important;
+}
+
+/* TextArea */
+textarea{
+    color:#111827 !important;
+    background:white !important;
+}
+
+/* Placeholder */
+textarea::placeholder{
+    color:#6B7280 !important;
+}
+
+/* Text Input */
+input{
+    color:#111827 !important;
+    background:white !important;
+}
+
+/* Expander */
+details{
+    color:#111827 !important;
+}
+
+/* Metrics */
+[data-testid="metric-container"] label,
+[data-testid="metric-container"] div{
+    color:#111827 !important;
+}
 
 </style>
 """,unsafe_allow_html=True)
@@ -273,7 +341,9 @@ with tab1:
     
     with col1:
         st.subheader("Enter Customer Review")
-        user_input = st.text_area("", height=200, 
+        user_input = st.text_area("Customer Review",
+                                  height=200,
+                                  label_visibility="collapsed",
                                   placeholder="Example: 'This product exceeded my expectations! The quality is outstanding and delivery was fast.'",
                                   key="review_input")
         
